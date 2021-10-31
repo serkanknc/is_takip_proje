@@ -32,14 +32,14 @@ namespace is_takip_proje.Formlar
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmGorev));
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.TxtGorevVeren = new DevExpress.XtraEditors.TextEdit();
             this.lookUpEdit1 = new DevExpress.XtraEditors.LookUpEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.pictureEdit2 = new DevExpress.XtraEditors.PictureEdit();
-            this.textEdit2 = new DevExpress.XtraEditors.MemoEdit();
+            this.TxtAciklama = new DevExpress.XtraEditors.MemoEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.pictureEdit3 = new DevExpress.XtraEditors.PictureEdit();
-            this.textEdit3 = new DevExpress.XtraEditors.DateEdit();
+            this.TxtTarih = new DevExpress.XtraEditors.DateEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.pictureEdit4 = new DevExpress.XtraEditors.PictureEdit();
             this.checkEdit1 = new DevExpress.XtraEditors.CheckEdit();
@@ -49,13 +49,13 @@ namespace is_takip_proje.Formlar
             this.BtnVazgec = new DevExpress.XtraEditors.SimpleButton();
             this.BtnKaydet = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtGorevVeren.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtAciklama.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtTarih.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtTarih.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit4.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit5.Properties)).BeginInit();
@@ -84,12 +84,12 @@ namespace is_takip_proje.Formlar
             this.labelControl1.TabIndex = 1;
             this.labelControl1.Text = "Görev Veren";
             // 
-            // textEdit1
+            // TxtGorevVeren
             // 
-            this.textEdit1.Location = new System.Drawing.Point(118, 12);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(212, 20);
-            this.textEdit1.TabIndex = 2;
+            this.TxtGorevVeren.Location = new System.Drawing.Point(118, 12);
+            this.TxtGorevVeren.Name = "TxtGorevVeren";
+            this.TxtGorevVeren.Size = new System.Drawing.Size(212, 20);
+            this.TxtGorevVeren.TabIndex = 2;
             // 
             // lookUpEdit1
             // 
@@ -122,12 +122,12 @@ namespace is_takip_proje.Formlar
             this.pictureEdit2.Size = new System.Drawing.Size(32, 32);
             this.pictureEdit2.TabIndex = 4;
             // 
-            // textEdit2
+            // TxtAciklama
             // 
-            this.textEdit2.Location = new System.Drawing.Point(118, 165);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Size = new System.Drawing.Size(212, 66);
-            this.textEdit2.TabIndex = 6;
+            this.TxtAciklama.Location = new System.Drawing.Point(118, 165);
+            this.TxtAciklama.Name = "TxtAciklama";
+            this.TxtAciklama.Size = new System.Drawing.Size(212, 66);
+            this.TxtAciklama.TabIndex = 6;
             // 
             // labelControl3
             // 
@@ -150,21 +150,25 @@ namespace is_takip_proje.Formlar
             this.pictureEdit3.Size = new System.Drawing.Size(32, 32);
             this.pictureEdit3.TabIndex = 8;
             // 
-            // textEdit3
+            // TxtTarih
             // 
-            this.textEdit3.EditValue = null;
-            this.textEdit3.Location = new System.Drawing.Point(118, 88);
-            this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.TxtTarih.EditValue = null;
+            this.TxtTarih.Location = new System.Drawing.Point(118, 88);
+            this.TxtTarih.Name = "TxtTarih";
+            this.TxtTarih.Properties.BeepOnError = false;
+            this.TxtTarih.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.textEdit3.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.TxtTarih.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.textEdit3.Properties.DisplayFormat.FormatString = "";
-            this.textEdit3.Properties.EditFormat.FormatString = "";
-            this.textEdit3.Properties.Mask.EditMask = "";
-            this.textEdit3.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.textEdit3.Size = new System.Drawing.Size(212, 20);
-            this.textEdit3.TabIndex = 10;
+            this.TxtTarih.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.ClassicNew;
+            this.TxtTarih.Properties.DisplayFormat.FormatString = "";
+            this.TxtTarih.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.TxtTarih.Properties.EditFormat.FormatString = "";
+            this.TxtTarih.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.TxtTarih.Properties.MaskSettings.Set("mask", "d");
+            this.TxtTarih.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
+            this.TxtTarih.Size = new System.Drawing.Size(212, 20);
+            this.TxtTarih.TabIndex = 10;
             // 
             // labelControl4
             // 
@@ -220,13 +224,13 @@ namespace is_takip_proje.Formlar
             // 
             this.panelControl1.Controls.Add(this.pictureEdit1);
             this.panelControl1.Controls.Add(this.labelControl5);
-            this.panelControl1.Controls.Add(this.textEdit3);
+            this.panelControl1.Controls.Add(this.TxtTarih);
             this.panelControl1.Controls.Add(this.pictureEdit5);
-            this.panelControl1.Controls.Add(this.textEdit2);
+            this.panelControl1.Controls.Add(this.TxtAciklama);
             this.panelControl1.Controls.Add(this.checkEdit1);
             this.panelControl1.Controls.Add(this.labelControl1);
             this.panelControl1.Controls.Add(this.labelControl4);
-            this.panelControl1.Controls.Add(this.textEdit1);
+            this.panelControl1.Controls.Add(this.TxtGorevVeren);
             this.panelControl1.Controls.Add(this.pictureEdit4);
             this.panelControl1.Controls.Add(this.lookUpEdit1);
             this.panelControl1.Controls.Add(this.labelControl3);
@@ -240,21 +244,23 @@ namespace is_takip_proje.Formlar
             // 
             // BtnVazgec
             // 
-            this.BtnVazgec.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnSil.ImageOptions.Image")));
+            this.BtnVazgec.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnVazgec.ImageOptions.Image")));
             this.BtnVazgec.Location = new System.Drawing.Point(148, 261);
             this.BtnVazgec.Name = "BtnVazgec";
             this.BtnVazgec.Size = new System.Drawing.Size(102, 27);
             this.BtnVazgec.TabIndex = 20;
             this.BtnVazgec.Text = "Vazgeç";
+            this.BtnVazgec.Click += new System.EventHandler(this.BtnVazgec_Click);
             // 
             // BtnKaydet
             // 
-            this.BtnKaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnEkle.ImageOptions.Image")));
+            this.BtnKaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnKaydet.ImageOptions.Image")));
             this.BtnKaydet.Location = new System.Drawing.Point(256, 261);
             this.BtnKaydet.Name = "BtnKaydet";
             this.BtnKaydet.Size = new System.Drawing.Size(102, 27);
             this.BtnKaydet.TabIndex = 19;
             this.BtnKaydet.Text = "Kaydet";
+            this.BtnKaydet.Click += new System.EventHandler(this.BtnKaydet_Click);
             // 
             // FrmGorev
             // 
@@ -267,14 +273,15 @@ namespace is_takip_proje.Formlar
             this.Name = "FrmGorev";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Yeni Görev Kartı";
+            this.Load += new System.EventHandler(this.FrmGorev_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtGorevVeren.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtAciklama.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtTarih.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtTarih.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit4.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit5.Properties)).EndInit();
@@ -289,14 +296,14 @@ namespace is_takip_proje.Formlar
 
         private DevExpress.XtraEditors.PictureEdit pictureEdit1;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit TxtGorevVeren;
         private DevExpress.XtraEditors.LookUpEdit lookUpEdit1;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.PictureEdit pictureEdit2;
-        private DevExpress.XtraEditors.MemoEdit textEdit2;
+        private DevExpress.XtraEditors.MemoEdit TxtAciklama;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.PictureEdit pictureEdit3;
-        private DevExpress.XtraEditors.DateEdit textEdit3;
+        private DevExpress.XtraEditors.DateEdit TxtTarih;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.PictureEdit pictureEdit4;
         private DevExpress.XtraEditors.CheckEdit checkEdit1;

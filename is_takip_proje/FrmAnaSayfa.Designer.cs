@@ -32,7 +32,7 @@ namespace is_takip_proje
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAnaSayfa));
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
-            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.BtnAnaForm = new DevExpress.XtraBars.BarButtonItem();
             this.BtnDepartmanListesi = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
@@ -48,7 +48,7 @@ namespace is_takip_proje
             this.barButtonItem14 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem15 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem16 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem17 = new DevExpress.XtraBars.BarButtonItem();
+            this.BtnGorevDetay = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem18 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem19 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem20 = new DevExpress.XtraBars.BarButtonItem();
@@ -88,7 +88,7 @@ namespace is_takip_proje
             this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControl1.ExpandCollapseItem,
             this.ribbonControl1.SearchEditItem,
-            this.barButtonItem1,
+            this.BtnAnaForm,
             this.BtnDepartmanListesi,
             this.barButtonItem3,
             this.barButtonItem4,
@@ -104,7 +104,7 @@ namespace is_takip_proje
             this.barButtonItem14,
             this.barButtonItem15,
             this.barButtonItem16,
-            this.barButtonItem17,
+            this.BtnGorevDetay,
             this.barButtonItem18,
             this.barButtonItem19,
             this.barButtonItem20,
@@ -126,13 +126,14 @@ namespace is_takip_proje
             this.ribbonPage7});
             this.ribbonControl1.Size = new System.Drawing.Size(988, 150);
             // 
-            // barButtonItem1
+            // BtnAnaForm
             // 
-            this.barButtonItem1.Caption = "Ana Sayfa";
-            this.barButtonItem1.Id = 1;
-            this.barButtonItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
-            this.barButtonItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
-            this.barButtonItem1.Name = "barButtonItem1";
+            this.BtnAnaForm.Caption = "Ana Sayfa";
+            this.BtnAnaForm.Id = 1;
+            this.BtnAnaForm.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
+            this.BtnAnaForm.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
+            this.BtnAnaForm.Name = "BtnAnaForm";
+            this.BtnAnaForm.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnAnaForm_ItemClick);
             // 
             // BtnDepartmanListesi
             // 
@@ -230,8 +231,8 @@ namespace is_takip_proje
             // 
             this.BtnYeniGorev.Caption = "Yeni Görev Tanımla";
             this.BtnYeniGorev.Id = 13;
-            this.BtnYeniGorev.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem13.ImageOptions.Image")));
-            this.BtnYeniGorev.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem13.ImageOptions.LargeImage")));
+            this.BtnYeniGorev.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnYeniGorev.ImageOptions.Image")));
+            this.BtnYeniGorev.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BtnYeniGorev.ImageOptions.LargeImage")));
             this.BtnYeniGorev.Name = "BtnYeniGorev";
             this.BtnYeniGorev.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnYeniGorev_ItemClick);
             // 
@@ -259,13 +260,14 @@ namespace is_takip_proje
             this.barButtonItem16.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem16.ImageOptions.LargeImage")));
             this.barButtonItem16.Name = "barButtonItem16";
             // 
-            // barButtonItem17
+            // BtnGorevDetay
             // 
-            this.barButtonItem17.Caption = "Görev Detayları";
-            this.barButtonItem17.Id = 17;
-            this.barButtonItem17.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem17.ImageOptions.Image")));
-            this.barButtonItem17.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem17.ImageOptions.LargeImage")));
-            this.barButtonItem17.Name = "barButtonItem17";
+            this.BtnGorevDetay.Caption = "Görev Detayları";
+            this.BtnGorevDetay.Id = 17;
+            this.BtnGorevDetay.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnGorevDetay.ImageOptions.Image")));
+            this.BtnGorevDetay.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BtnGorevDetay.ImageOptions.LargeImage")));
+            this.BtnGorevDetay.Name = "BtnGorevDetay";
+            this.BtnGorevDetay.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnGorevDetay_ItemClick);
             // 
             // barButtonItem18
             // 
@@ -340,7 +342,7 @@ namespace is_takip_proje
             // 
             // ribbonPageGroup1
             // 
-            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem1);
+            this.ribbonPageGroup1.ItemLinks.Add(this.BtnAnaForm);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             // 
             // ribbonPage2
@@ -425,7 +427,7 @@ namespace is_takip_proje
             // 
             // ribbonPageGroup10
             // 
-            this.ribbonPageGroup10.ItemLinks.Add(this.barButtonItem17);
+            this.ribbonPageGroup10.ItemLinks.Add(this.BtnGorevDetay);
             this.ribbonPageGroup10.Name = "ribbonPageGroup10";
             // 
             // ribbonPage6
@@ -490,7 +492,7 @@ namespace is_takip_proje
         private DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl1;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraBars.BarButtonItem BtnAnaForm;
         private DevExpress.XtraBars.BarButtonItem BtnDepartmanListesi;
         private DevExpress.XtraBars.BarButtonItem barButtonItem3;
         private DevExpress.XtraBars.BarButtonItem barButtonItem4;
@@ -509,7 +511,7 @@ namespace is_takip_proje
         private DevExpress.XtraBars.BarButtonItem barButtonItem14;
         private DevExpress.XtraBars.BarButtonItem barButtonItem15;
         private DevExpress.XtraBars.BarButtonItem barButtonItem16;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem17;
+        private DevExpress.XtraBars.BarButtonItem BtnGorevDetay;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage3;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
