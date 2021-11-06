@@ -193,6 +193,7 @@ namespace is_takip_proje.Formlar
             // 
             // checkEdit1
             // 
+            this.checkEdit1.EditValue = true;
             this.checkEdit1.Location = new System.Drawing.Point(118, 126);
             this.checkEdit1.Name = "checkEdit1";
             this.checkEdit1.Properties.Caption = "Aktif Görev";

@@ -83,5 +83,16 @@ namespace is_takip_proje
                 frmAnaForm.Show();
             }
         }
+
+        Formlar.FrmAktifCagrilar FrmAktifCagrilar;
+        private void BtnAktifCagrilar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (FrmAktifCagrilar == null || FrmAktifCagrilar.IsDisposed)
+            {
+                FrmAktifCagrilar = new Formlar.FrmAktifCagrilar();
+                FrmAktifCagrilar.MdiParent = this;
+                FrmAktifCagrilar.Show();
+            }
+        }
     }
 }

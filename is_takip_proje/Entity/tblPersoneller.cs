@@ -19,6 +19,7 @@ namespace is_takip_proje.Entity
         {
             this.tblGorevler = new HashSet<tblGorevler>();
             this.tblGorevler1 = new HashSet<tblGorevler>();
+            this.tblCagrilar = new HashSet<tblCagrilar>();
         }
     
         public int ID { get; set; }
@@ -29,11 +30,14 @@ namespace is_takip_proje.Entity
         public string Gorsel { get; set; }
         public Nullable<int> Departman { get; set; }
         public Nullable<bool> Durum { get; set; }
+        public string Rol { get; set; }
     
         public virtual tblDepartmanlar tblDepartmanlar { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tblGorevler> tblGorevler { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tblGorevler> tblGorevler1 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<tblCagrilar> tblCagrilar { get; set; }
     }
 }

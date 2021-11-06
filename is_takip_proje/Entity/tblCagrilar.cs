@@ -14,13 +14,23 @@ namespace is_takip_proje.Entity
     
     public partial class tblCagrilar
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public tblCagrilar()
+        {
+            this.tblCagriDetay = new HashSet<tblCagriDetay>();
+        }
+    
         public int ID { get; set; }
         public Nullable<int> CagriFirma { get; set; }
         public string Konu { get; set; }
         public string Aciklama { get; set; }
         public Nullable<System.DateTime> Tarih { get; set; }
         public Nullable<bool> Durum { get; set; }
+        public Nullable<int> CagriPersonel { get; set; }
     
         public virtual tblFirmalar tblFirmalar { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<tblCagriDetay> tblCagriDetay { get; set; }
+        public virtual tblPersoneller tblPersoneller { get; set; }
     }
 }

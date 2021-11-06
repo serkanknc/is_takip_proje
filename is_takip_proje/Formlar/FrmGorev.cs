@@ -32,7 +32,7 @@ namespace is_takip_proje.Formlar
             t.Aciklama = TxtAciklama.Text;
             t.GorevAlan = int.Parse(lookUpEdit1.EditValue.ToString());
             t.Tarih = DateTime.Parse(TxtTarih.Text);
-            t.GorevVeren = int.Parse(TxtGorevVeren.Text);
+            t.GorevVeren = 1;
             db.tblGorevler.Add(t);
             db.SaveChanges();
             XtraMessageBox.Show("Görev başarılı bir şekilde tanımlandı.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);

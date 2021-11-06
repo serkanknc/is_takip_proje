@@ -70,6 +70,7 @@ namespace is_takip_proje.Formlar
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Top;
+            this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gridView1_CellValueChanged);
             // 
             // gridColumn1
@@ -123,14 +124,14 @@ namespace is_takip_proje.Formlar
             // görevDetaySilToolStripMenuItem
             // 
             this.görevDetaySilToolStripMenuItem.Name = "görevDetaySilToolStripMenuItem";
-            this.görevDetaySilToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.görevDetaySilToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.görevDetaySilToolStripMenuItem.Text = "Görev Detay Sil";
             this.görevDetaySilToolStripMenuItem.Click += new System.EventHandler(this.görevDetaySilToolStripMenuItem_Click);
             // 
             // kapatToolStripMenuItem
             // 
             this.kapatToolStripMenuItem.Name = "kapatToolStripMenuItem";
-            this.kapatToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.kapatToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.kapatToolStripMenuItem.Text = "Kapat";
             // 
             // FrmGorevDetay

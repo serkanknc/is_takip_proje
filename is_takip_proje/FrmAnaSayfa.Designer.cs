@@ -57,6 +57,8 @@ namespace is_takip_proje
             this.barButtonItem23 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem24 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem25 = new DevExpress.XtraBars.BarButtonItem();
+            this.BtnAktifCagrilar = new DevExpress.XtraBars.BarButtonItem();
+            this.BtnPasifCagrilar = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -77,6 +79,8 @@ namespace is_takip_proje
             this.ribbonPageGroup12 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage7 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup13 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPage8 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup14 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
@@ -112,9 +116,11 @@ namespace is_takip_proje
             this.barButtonItem22,
             this.barButtonItem23,
             this.barButtonItem24,
-            this.barButtonItem25});
+            this.barButtonItem25,
+            this.BtnAktifCagrilar,
+            this.BtnPasifCagrilar});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 27;
+            this.ribbonControl1.MaxItemId = 29;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -122,6 +128,7 @@ namespace is_takip_proje
             this.ribbonPage3,
             this.ribbonPage4,
             this.ribbonPage5,
+            this.ribbonPage8,
             this.ribbonPage6,
             this.ribbonPage7});
             this.ribbonControl1.Size = new System.Drawing.Size(988, 150);
@@ -130,8 +137,8 @@ namespace is_takip_proje
             // 
             this.BtnAnaForm.Caption = "Ana Sayfa";
             this.BtnAnaForm.Id = 1;
-            this.BtnAnaForm.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
-            this.BtnAnaForm.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
+            this.BtnAnaForm.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnAnaForm.ImageOptions.Image")));
+            this.BtnAnaForm.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BtnAnaForm.ImageOptions.LargeImage")));
             this.BtnAnaForm.Name = "BtnAnaForm";
             this.BtnAnaForm.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnAnaForm_ItemClick);
             // 
@@ -333,6 +340,23 @@ namespace is_takip_proje
             this.barButtonItem25.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem25.ImageOptions.LargeImage")));
             this.barButtonItem25.Name = "barButtonItem25";
             // 
+            // BtnAktifCagrilar
+            // 
+            this.BtnAktifCagrilar.Caption = "Aktif Çağrılar";
+            this.BtnAktifCagrilar.Id = 27;
+            this.BtnAktifCagrilar.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnAktifCagrilar.ImageOptions.Image")));
+            this.BtnAktifCagrilar.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BtnAktifCagrilar.ImageOptions.LargeImage")));
+            this.BtnAktifCagrilar.Name = "BtnAktifCagrilar";
+            this.BtnAktifCagrilar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnAktifCagrilar_ItemClick);
+            // 
+            // BtnPasifCagrilar
+            // 
+            this.BtnPasifCagrilar.Caption = "Pasif Çağrılar";
+            this.BtnPasifCagrilar.Id = 28;
+            this.BtnPasifCagrilar.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnPasifCagrilar.ImageOptions.Image")));
+            this.BtnPasifCagrilar.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BtnPasifCagrilar.ImageOptions.LargeImage")));
+            this.BtnPasifCagrilar.Name = "BtnPasifCagrilar";
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -465,6 +489,19 @@ namespace is_takip_proje
             this.ribbonPageGroup13.ItemLinks.Add(this.barButtonItem25);
             this.ribbonPageGroup13.Name = "ribbonPageGroup13";
             // 
+            // ribbonPage8
+            // 
+            this.ribbonPage8.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup14});
+            this.ribbonPage8.Name = "ribbonPage8";
+            this.ribbonPage8.Text = "Çağrılar";
+            // 
+            // ribbonPageGroup14
+            // 
+            this.ribbonPageGroup14.ItemLinks.Add(this.BtnAktifCagrilar);
+            this.ribbonPageGroup14.ItemLinks.Add(this.BtnPasifCagrilar);
+            this.ribbonPageGroup14.Name = "ribbonPageGroup14";
+            // 
             // xtraTabbedMdiManager1
             // 
             this.xtraTabbedMdiManager1.MdiParent = this;
@@ -536,6 +573,10 @@ namespace is_takip_proje
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage7;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup13;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
+        private DevExpress.XtraBars.BarButtonItem BtnAktifCagrilar;
+        private DevExpress.XtraBars.BarButtonItem BtnPasifCagrilar;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage8;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup14;
     }
 }
 
