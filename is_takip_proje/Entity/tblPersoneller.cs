@@ -31,6 +31,7 @@ namespace is_takip_proje.Entity
         public Nullable<int> Departman { get; set; }
         public Nullable<bool> Durum { get; set; }
         public string Rol { get; set; }
+        public string Sifre { get; set; }
     
         public virtual tblDepartmanlar tblDepartmanlar { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
