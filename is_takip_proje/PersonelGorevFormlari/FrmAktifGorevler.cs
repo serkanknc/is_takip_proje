@@ -19,8 +19,12 @@ namespace is_takip_proje.PersonelGorevFormlari
             InitializeComponent();
         }
         dbisTakipEntities db = new dbisTakipEntities();
+
+        public string mail2;
         private void FrmAktifGorevler_Load(object sender, EventArgs e)
         {
+            var personelid = db.tblPersoneller.Where(x => x.Mail == mail2).Select(y => y.ID).FirstOrDefault();
+            
             var degerler = (from x in db.tblGorevler
                             select new
                             {
@@ -29,7 +33,7 @@ namespace is_takip_proje.PersonelGorevFormlari
                                 x.Tarih,
                                 x.GorevAlan,
                                 x.Durum
-                            }).Where(x => x.GorevAlan == 6 && x.Durum == true).ToList();
+                            }).Where(x => x.GorevAlan == personelid && x.Durum == true).ToList();
             gridControl1.DataSource = degerler;
             gridView1.Columns["GorevAlan"].Visible = false;
             gridView1.Columns["Durum"].Visible = false;

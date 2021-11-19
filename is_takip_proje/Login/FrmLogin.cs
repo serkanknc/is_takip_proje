@@ -66,6 +66,9 @@ namespace is_takip_proje.Login
             if (admin != null)
             {
                 XtraMessageBox.Show("Hoşgeldiniz.");
+                FrmAnaSayfa frm = new FrmAnaSayfa();
+                frm.Show();
+                this.Hide();
             }
             else
             {
@@ -80,6 +83,7 @@ namespace is_takip_proje.Login
             if (personel != null)
             {
                 PersonelGorevFormlari.FrmPersonelFormu frm = new PersonelGorevFormlari.FrmPersonelFormu();
+                frm.mail = TxtKullaniciAdi.Text;
                 frm.Show();
                 this.Hide();
             }

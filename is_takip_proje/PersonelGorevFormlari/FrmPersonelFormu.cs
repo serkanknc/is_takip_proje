@@ -16,26 +16,44 @@ namespace is_takip_proje.PersonelGorevFormlari
         {
             InitializeComponent();
         }
+        public string mail;
 
+        PersonelGorevFormlari.FrmAktifGorevler frmAktif;
         private void BtnAktifGorevler_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            PersonelGorevFormlari.FrmAktifGorevler frmAktif = new PersonelGorevFormlari.FrmAktifGorevler();
-            frmAktif.MdiParent = this;
-            frmAktif.Show();
+
+            if (frmAktif == null || frmAktif.IsDisposed)
+            {
+                frmAktif = new PersonelGorevFormlari.FrmAktifGorevler();
+                frmAktif.MdiParent = this;
+                frmAktif.mail2 = mail;
+                frmAktif.Show();
+            }
+
         }
 
+        PersonelGorevFormlari.FrmPasifGorevler frmPasif;
         private void BtnPasifGorevler_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            PersonelGorevFormlari.FrmPasifGorevler frmPasif = new PersonelGorevFormlari.FrmPasifGorevler();
-            frmPasif.MdiParent = this;
-            frmPasif.Show();
+            if (frmPasif == null || frmPasif.IsDisposed)
+            {
+                frmPasif = new PersonelGorevFormlari.FrmPasifGorevler();
+                frmPasif.MdiParent = this;
+                frmPasif.mail2 = mail;
+                frmPasif.Show();
+            }
         }
 
+        PersonelGorevFormlari.FrmCagriListesi frmCagriListesi;
         private void BtnCagriListesi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            PersonelGorevFormlari.FrmCagriListesi frmCagriListesi = new PersonelGorevFormlari.FrmCagriListesi();
-            frmCagriListesi.MdiParent = this;
-            frmCagriListesi.Show();
+            if (frmCagriListesi == null || frmCagriListesi.IsDisposed)
+            {
+                frmCagriListesi = new PersonelGorevFormlari.FrmCagriListesi();
+                frmCagriListesi.MdiParent = this;
+                frmCagriListesi.mail2 = mail;
+                frmCagriListesi.Show();
+            }
         }
     }
 }

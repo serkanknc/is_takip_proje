@@ -52,6 +52,7 @@ namespace is_takip_proje.Formlar
             gelenveri.Tarih = Convert.ToDateTime(TxtTarih.Text);
             gelenveri.Aciklama = TxtAciklama.Text;
             gelenveri.CagriPersonel = int.Parse(lookUpEdit1.EditValue.ToString());
+            gelenveri.Durum = true;
             db.SaveChanges();
             XtraMessageBox.Show("Çağrı başarılı bir şekilde atandı.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
